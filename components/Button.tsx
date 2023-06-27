@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`relative disabled:opacity-70 disabled:cursor-not-allowed tracking-widest rounded-lg hover:bg-rose-600 hover:scale-[99%] transition w-full ${
+      className={`relative disabled:opacity-70 disabled:cursor-not-allowed tracking-widest rounded-lg hover:bg-rose-500 hover:scale-[99%] hover:text-white transition w-full ${
         outline ? "bg-white border-black text-black " : "bg-rose-500 text-white"
       } ${
         small

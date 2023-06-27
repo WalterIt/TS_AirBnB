@@ -77,7 +77,9 @@ const Modal: React.FC<ModalProps> = ({
                 >
                   <IoMdClose size={20} />
                 </button>
-                <div className="text-lg font-semibold">{title}</div>
+                <div className="text-[24px] tracking-wider font-semibold">
+                  {title}
+                </div>
               </div>
               {/* BODY  */}
               <div className="relative p-6 flex-auto">{body}</div>
@@ -99,6 +101,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>
