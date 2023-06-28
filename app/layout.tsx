@@ -5,6 +5,7 @@ import RegisterModal from "@/components/modals/RegisterModal";
 import ToasterProvider from "@/providers/ToasterProvider";
 import LoginModal from "@/components/modals/LoginModal";
 import getCurrentUser from "@/actions/getCurrentUser";
+import { data } from "autoprefixer";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -19,6 +20,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const currentUser = await getCurrentUser();
+
+  console.log(data);
 
   return (
     <html lang="en">
