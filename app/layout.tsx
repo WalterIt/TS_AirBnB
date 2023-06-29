@@ -2,8 +2,9 @@ import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
 import { Nunito } from "next/font/google";
 import RegisterModal from "@/components/modals/RegisterModal";
-import ToasterProvider from "@/providers/ToasterProvider";
 import LoginModal from "@/components/modals/LoginModal";
+import RentModal from "@/components/modals/RentModal";
+import ToasterProvider from "@/providers/ToasterProvider";
 import getCurrentUser from "@/actions/getCurrentUser";
 import { data } from "autoprefixer";
 
@@ -21,14 +22,13 @@ export default async function RootLayout({
 }) {
   const currentUser = await getCurrentUser();
 
-  console.log(data);
-
   return (
     <html lang="en">
       <body className={nunito.className}>
         <ToasterProvider />
         <LoginModal />
         <RegisterModal />
+        <RentModal />
         <Navbar currentUser={currentUser} />
         {children}
       </body>

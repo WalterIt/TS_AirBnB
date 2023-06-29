@@ -7,3 +7,18 @@ body,
 :root {
   height: 100%;
 }
+
+.scroll-style::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(11, 11, 11, 0.392) rgba(14, 14, 14, 0.178);
+}
+.scroll-style::-webkit-scrollbar {
+  @apply w-2;
+}
+.scroll-style::-webkit-scrollbar-track {
+  @apply bg-slate-400;
+}
+.scroll-style::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gradient-to-tr from-slate-800 to-slate-100 via-gray-500 cursor-pointer;
+}
