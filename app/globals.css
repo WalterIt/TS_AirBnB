@@ -22,3 +22,10 @@ body,
 .scroll-style::-webkit-scrollbar-thumb {
   @apply rounded-full bg-gradient-to-tr from-slate-800 to-slate-100 via-gray-500 cursor-pointer;
 }
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+  z-index: 0 !important;
+}
