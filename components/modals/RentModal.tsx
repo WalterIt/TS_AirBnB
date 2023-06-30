@@ -6,6 +6,7 @@ import Heading from "../Heading";
 import { categories } from "../layout/Categories";
 import CategoryInput from "../form/CategoryInput";
 import Counter from "../form/Counter";
+import ImageUpload from "../form/ImageUpload";
 import { FieldValues, useForm } from "react-hook-form";
 import CountrySelect from "../form/CountrySelect";
 import dynamic from "next/dynamic";
@@ -51,6 +52,7 @@ const RentModal = () => {
   const roomCount = watch("roomCount");
   const bathroomCount = watch("bathroomCount");
   const parking = watch("parking");
+  const imageSrc = watch("imageSrc");
 
   const Map = useMemo(
     () =>
@@ -156,6 +158,21 @@ const RentModal = () => {
           subtitle="Do you have a parking?"
           value={parking}
           onChange={(value) => setCustomValue("parking", value)}
+        />
+      </div>
+    );
+  }
+
+  if (step === STEPS.IMAGES) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Show your place to the world!"
+          subtitle="Upload some photos!"
+        />
+        <ImageUpload
+          value={imageSrc}
+          onChange={(value) => setCustomValue("imageSrc", value)}
         />
       </div>
     );
