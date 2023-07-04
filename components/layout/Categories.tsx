@@ -13,6 +13,7 @@ import {
   GiWindmill,
 } from "react-icons/gi";
 import { FaSkiing } from "react-icons/fa";
+import { BiBed } from "react-icons/bi";
 import { BsSnow } from "react-icons/bs";
 import { IoDiamond } from "react-icons/io5";
 import { MdOutlineVilla } from "react-icons/md";
@@ -21,6 +22,11 @@ import CategoryBox from "../CategoryBox";
 import Container from "../Container";
 
 export const categories = [
+  {
+    label: "Rooms",
+    icon: BiBed,
+    description: "Your own room in a home, plus access to shared spaces.",
+  },
   {
     label: "Beach",
     icon: TbBeach,
