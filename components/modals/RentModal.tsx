@@ -14,6 +14,7 @@ import Input from "../form/Input";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Textarea from "../form/Textarea";
 
 enum STEPS {
   CATEGORY = 0,
@@ -218,7 +219,7 @@ const RentModal = () => {
           required
         />
         <hr />
-        <Input
+        <Textarea
           id="description"
           label="Description"
           disabled={isLoading}
